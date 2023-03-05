@@ -1,0 +1,70 @@
+.services {
+    &__cards {
+        display: flex;
+        justify-content: space-between;
+        text-align: center;
+        position: relative;
+        @media screen and (max-width: $max-mobile) {
+            flex-direction: column;
+            align-items: center;
+            gap: 3rem;
+        }
+        .service__wrapper {
+            position: relative;
+            z-index: 1;
+            width: 225px;
+            height: 320px;
+            padding: 2rem;
+            background-color: $container-color;
+            border-radius: 8rem;
+            @media screen and (max-width: $max-mobile) {
+                height: 280px;
+                .service__wrapper-border{
+                    height: 310px;
+                }
+            }
+
+            
+
+            /* border animation */
+            &:hover .service__wrapper-border{
+                opacity: 1;
+            }
+
+            &:hover .service__icon i{
+                transform: rotateY(360deg)
+            }
+
+
+            .service__icon {
+                i {
+                    @include h1-font-size;
+                    padding-bottom: 1rem;
+                    transition: all 1s
+                }
+            }
+            .service__title {
+                @include h2-font-size;
+                padding-bottom: 1rem;
+                font-weight: $font-semi-bold;
+            }
+            .service__description {
+                color: $text-color;
+                @include tiny-font-size
+
+                
+            }
+            &-border {
+                border: 1px solid black;
+                position: absolute;
+                width: 255px;
+                height: 350px;
+                top: -15px;
+                left: -15px;
+                border-radius: 8rem;
+                opacity: 0;
+               transition: opacity 1s;
+            }
+        }
+    }
+}

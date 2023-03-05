@@ -1,0 +1,36 @@
+.qualifications {
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        @media screen and (max-width: $max-mobile) {
+            flex-direction: column;
+            text-align: center;
+            gap: 3rem;
+            
+        }
+        .qualification {
+            &__title {
+                text-align: center;
+                color: $title-color;
+                font-weight: $font-semi-bold;
+                @include h3-font-size;
+                margin-bottom: 2rem;
+            }
+            &__list {
+                &__item {
+                    margin-bottom: 1rem;
+                    &-title {
+                        @include h2-font-size;
+                        padding-bottom: 1rem;
+                        font-weight: $font-semi-bold
+                    }
+                    &-info {
+                        @include small-font-size;
+                        color: $text-color-light;
+                        padding-bottom: .8rem;
+                    }
+                }
+            }
+        }
+    }
+}

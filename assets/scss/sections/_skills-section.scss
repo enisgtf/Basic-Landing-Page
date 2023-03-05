@@ -1,0 +1,58 @@
+.skills {
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        @media screen and (max-width: $max-mobile) {
+            flex-direction: column;
+            gap: 5rem;
+        }
+
+        .skills__container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            text-align: center;
+            flex-direction: column;
+
+            .skills__title {
+                color: $title-color;
+                font-weight: $font-semi-bold;
+                @include h3-font-size;
+                margin-bottom: 2rem;
+            }
+            .skills__content {
+                display: grid;
+                grid-template-columns: repeat(3, max-content);
+                gap: 2rem;
+                .skills__item {
+                    &:hover .skills__item-img img{
+                        position: relative;
+                        animation: skills-hover 1s;
+                    }
+                    &-img {
+                        width: 80px;
+                        height: 100px;
+                        background-color: $container-color;
+                        border-radius: 3rem;
+                        margin-bottom: 1rem;
+                        position: relative;
+                        z-index: -2;
+
+                        img {
+                            position: relative;
+                            top: 25%;
+                            width: 40px;
+                            z-index: -1;
+                        }
+                    }
+                    &-name {
+                        @include small-font-size;
+                        margin-bottom: 0.25rem;
+                    }
+                }
+                &-subtitle {
+                }
+            }
+        }
+    }
+}

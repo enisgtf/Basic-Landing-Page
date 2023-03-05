@@ -1,0 +1,104 @@
+/*=============== VARIABLES CSS ===============*/
+
+/*=============== BREAKPOINTS ===============*/
+/* For small devices */
+$max-mobile: 767px;
+
+/* For medium devices */
+$min-tablet: 768px;
+$max-tablet: 1023px;
+
+/* For large devices */
+$min-desktop: 1024px;
+
+/*=============== SECTION PADDING ===============*/
+
+@mixin padding-x {
+    padding-inline: 2rem;
+    @media screen and (min-width: $min-tablet) and (max-width: $max-tablet) {
+        padding-inline: 1.5rem;
+    }
+    @media screen and (max-width: $max-mobile) {
+        padding-inline: 1rem;
+    }
+}
+
+@mixin padding-y {
+    padding-block: 7rem;
+    @media screen and (min-width: $min-tablet) and (max-width: $max-tablet) {
+        padding-block: 5rem;
+    }
+    @media screen and (max-width: $max-mobile) {
+        padding-block: 4rem;
+    }
+}
+
+/*========== Colors ==========*/
+/*Color mode HSL(hue, saturation, lightness)*/
+$first-color: hsl(207, 65%, 65%);
+$text-color-light: hsl(207, 4%, 56%);
+$title-color: hsl(207, 4%, 16%); 
+$text-color: hsl(207, 4%, 28%); 
+$body-color: hsl(207, 4%, 99%); 
+$container-color: hsl(207, 4%, 95%); 
+
+
+/* Change the first number */
+/* Blue: 207 - Purple: 250 - Pink: 356 - Teal: 174 */
+$gradient-color: linear-gradient(180deg, hsla(207, 48%, 72%, 0), hsla(207, 65%, 65%, 1));
+
+/*========== Font and typography ==========*/
+/*.5rem = 8px | 1rem = 16px ...*/
+$body-font: "Roboto", sans-serif;
+$title-font: "Lora", serif;
+
+/* Responsive typography */
+
+@mixin biggest-font-size() {
+    font-size: 3rem;
+    @media screen and (max-width: $max-tablet) {
+        font-size: 2rem;
+    }
+}
+@mixin h1-font-size() {
+    font-size: 2.25rem;
+    @media screen and (max-width: $max-tablet) {
+        font-size: 1.5rem;
+    }
+}
+@mixin h2-font-size() {
+    font-size: 1.5rem;
+    @media screen and (max-width: $max-tablet) {
+        font-size: 1.25rem;
+    }
+}
+@mixin h3-font-size() {
+    font-size: 1.25rem;
+    @media screen and (max-width: $max-tablet) {
+        font-size: 1rem;
+    }
+}
+@mixin normal-font-size() {
+    font-size: 1rem;
+    @media screen and (max-width: $max-tablet) {
+        font-size: 0.938rem;
+    }
+}
+@mixin small-font-size() {
+    font-size: 0.875rem;
+    @media screen and (max-width: $max-tablet) {
+        font-size: 0.813rem;
+    }
+}
+@mixin tiny-font-size() {
+    font-size: 0.688rem;
+    @media screen and (max-width: $max-tablet) {
+        font-size: 0.625rem;
+    }
+}
+
+/*========== Font weight ==========*/
+$font-medium: 500;
+$font-semi-bold: 600;
+
+

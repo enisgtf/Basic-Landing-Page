@@ -1,0 +1,32 @@
+.footer {
+    @include padding-y;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    .nav__logo {
+        @include biggest-font-size;
+        color: $title-color;
+        margin-bottom: 1rem;
+    }
+
+    &__subtitle{
+        color: $text-color;
+        @include small-font-size;
+        margin-bottom: 2.3rem;
+    }
+
+    &__nav{
+        @include h3-font-size;
+        display: flex;
+        gap: 2rem;
+        margin-bottom: 2.3rem;
+    }
+
+    &__social {
+        display: flex;
+        gap: 2rem;
+        color: $text-color;
+        @include h2-font-size
+    }
+}

@@ -1,0 +1,45 @@
+.testimonials {
+    &__container {
+        padding-bottom: 3rem;
+        .testimonial {
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            .testimonial-content {
+                max-width: 500px;
+            }
+
+            &__desc {
+                color: $text-color;
+                @include h2-font-size;
+                padding-bottom: 2rem;
+            }
+            &__owner {
+                @include small-font-size;
+                color: $title-color;
+                padding-bottom: 0.3rem;
+            }
+            .owner__info {
+                @include tiny-font-size;
+                color: $text-color-light;
+            }
+        }
+    }
+}
+
+.splide__pagination {
+    bottom: -1rem;
+}
+
+.splide__pagination__page.is-active {
+    background-color: black;
+    bottom: 0.1rem
+}
+
+.splide__arrow {
+    background-color: white;
+}
+
+
+

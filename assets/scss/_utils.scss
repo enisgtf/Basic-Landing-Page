@@ -1,0 +1,29 @@
+.container {
+    max-width: 1024px;
+    margin: 0 auto;
+    @include padding-x;
+}
+
+.section {
+    border-bottom: 1px solid $title-color;
+    @include padding-y;
+}
+
+.section__title {
+    @include biggest-font-size;
+    text-align: center;
+    font-weight: $font-semi-bold;
+    margin-bottom: 0.25rem;  
+}
+
+.section__subtitle {
+    text-align: center;
+    display: block;
+    @include small-font-size;
+    color: $text-color-light;
+    margin-bottom: 5rem;
+}
+
+.main {
+    overflow: hidden; /* For animation */
+}

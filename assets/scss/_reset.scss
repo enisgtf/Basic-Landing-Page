@@ -1,0 +1,71 @@
+/*=============== GOOGLE FONTS ===============*/
+@import url("https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600&family=Roboto:wght@400;500&display=swap");
+
+/*=============== BASE ===============*/
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @include normal-font-size;
+  min-height: 200vh;
+  font-family: $body-font;
+  background-color: $body-color;
+  color: $text-color;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: $title-color;
+  font-family: $title-font;
+  font-weight: $font-medium;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: $text-color;
+}
+
+img {
+  max-width: 100%;
+}
+
+i {
+  @include h2-font-size;
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+}
+
+/* scrollbar */
+
+::-webkit-scrollbar {
+  width: 0.6rem;
+  border-radius: 0.5rem;
+  background-color: hsl(207, 4%, 75%);
+
+  &-thumb {
+    border-radius: 0.5rem;
+    background-color: hsl(207, 4%, 60%);
+
+    &:hover {
+      background-color: hsl(207, 4%, 50%);
+    }
+  }
+}
